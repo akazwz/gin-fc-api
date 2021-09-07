@@ -17,7 +17,7 @@ const (
 	// 控制台设置的 Token
 	_settedToken = "aaa"
 	// 设置的转发 path
-	_httpPath = "/fc"
+	_httpPath = "/test"
 	// 监听的端口
 	_listenAddr = "0.0.0.0:9000"
 
