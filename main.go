@@ -15,8 +15,11 @@ func main() {
 			"path":    "/fc",
 		})
 	})
-	err := c.Run("0.0.0.0:9000")
-	if err != nil {
-		log.Println("server run error")
+	s := &http.Server{
+		Addr:    "0.0.0.0:9000",
+		Handler: c,
+	}
+	if err := s.ListenAndServe(); err != nil {
+		log.Fatalf("listenAndServe: %+v", err)
 	}
 }
